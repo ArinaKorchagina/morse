@@ -21,3 +21,22 @@ reverse_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D',
 def encode_to_morse(text):
     for i in text:
         print(morse[i.upper()], end='')
+
+
+def main():
+    print('Вы хотите закодировать - 1 или раскодировать текст - 2?')
+    n = input()
+    while n:
+        if n == '1':
+            print('Введите текст')
+            encode_to_morse(input())
+            break
+        elif n == '2':
+            print('Введите код')
+            decode_from_morse(input())
+            break
+        print('Вы хотите закодировать - 1 или раскодировать текст - 2?')
+        n = input()
+
+
+main()
