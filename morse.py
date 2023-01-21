@@ -33,11 +33,11 @@ def main():
     n = input()
     while n:
         if n == '1':
-            print('Введите текст')
+            print('Введите текст заглавными буквами')
             encode_to_morse(input())
             break
         elif n == '2':
-            print('Введите код')
+            print('Введите код заглавными буквами')
             decode_from_morse(input())
             break
         print('Вы хотите закодировать - 1 или раскодировать текст - 2?')
