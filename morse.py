@@ -37,7 +37,7 @@ def main():
             encode_to_morse(input())
             break
         elif n == '2':
-            print('Введите код заглавными буквами')
+            print('Введите код')
             decode_from_morse(input())
             break
         print('Вы хотите закодировать - 1 или раскодировать текст - 2?')
