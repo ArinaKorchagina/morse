@@ -23,6 +23,11 @@ def encode_to_morse(text):
         print(morse[i.upper()], end='')
 
 
+def decode_from_morse(t):
+    for i in t:
+        print(morse[i.upper()], end='')
+
+
 def main():
     print('Вы хотите закодировать - 1 или раскодировать текст - 2?')
     n = input()
