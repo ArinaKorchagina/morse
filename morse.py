@@ -25,7 +25,7 @@ def encode_to_morse(text):
 
 def decode_from_morse(t):
     for i in t:
-        print(morse[i.upper()], end='')
+        print(reverse_morse[i.upper()], end='')
 
 
 def main():
