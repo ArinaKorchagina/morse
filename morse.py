@@ -33,7 +33,7 @@ def main():
     n = input()
     while n:
         if n == '1':
-            print('Введите текст заглавными буквами')
+            print('Введите текст заглавными английскими буквами')
             encode_to_morse(input())
             break
         elif n == '2':
