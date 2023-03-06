@@ -6,7 +6,7 @@ morse = {'A': '.- ', 'B': '-... ', 'C': '-.-. ',
          'P': '.--. ', 'Q': '--.- ', 'R': '.-. ',
          'S': '... ', 'T': '- ', 'U': '..- ',
          'V': '...- ', 'W': '.-- ', 'X': '-..- ',
-         'Y': '-.-- ', 'Z': '--.. ', ' ': '   ',
+         'Y': '-.-- ', 'Z': '--.. ', ' ': '\t',
          }
 
 reverse_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D',
@@ -15,7 +15,7 @@ reverse_morse = {'.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D',
                  '--': 'M', '-.': 'N', '---': 'O', '.--.': 'P',
                  '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T',
                  '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X',
-                 '-.--': 'Y', '--..': 'Z', '    ': ' '}
+                 '-.--': 'Y', '--..': 'Z', '\t': ' '}
 
 
 def encode_to_morse(text):
@@ -23,9 +23,10 @@ def encode_to_morse(text):
         print(morse[i.upper()], end='')
 
 
-def decode_from_morse(t):
-    for i in t:
-        print(reverse_morse[i.upper()], end='')
+def decode_from_morse(cod):
+    cod = cod.replace('\t', ' %%% ').split()
+    for i in cod:
+        print(reverse_morse.get(i, ' '), end='')
 
 
 def main():
@@ -33,7 +34,7 @@ def main():
     n = input()
     while n:
         if n == '1':
-            print('Введите текст')
+            print('Введите текст заглавными английскими буквами')
             encode_to_morse(input())
             break
         elif n == '2':
